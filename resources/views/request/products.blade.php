@@ -45,7 +45,7 @@
                                     <div class="col">
                                         <p class="card-text bg-info py-1 px-2 text-center"
                                             style="border-radius: 5px; width: auto; float: right; font-size:14px;">
-                                            <b>Rp. {{ number_format($item['harga'], 0, ',', '.') }}</b>
+                                            <b>Rp.{{ number_format($item['harga'], 0, ',', '.') }}</b>
                                         </p>
                                     </div>
                                 </div>

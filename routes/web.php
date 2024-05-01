@@ -39,7 +39,7 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/list-menu/{makanan}/{harga}', function ($makanan, $harga) {
 //     return "Anda memilih makanan $makanan dengan harga $harga";
 // });
-Route::get('/amandemy-cafe', [AmandemyCafeController::class, 'index'])->name('amandemy-cafe');
+// Route::get('/amandemy-cafe', [AmandemyCafeController::class, 'index'])->name('amandemy-cafe');
 
 Route::get('/handle-request', [ProductsController::class, 'showForm'])->name('show-form');
 Route::post('/handle-request', [ProductsController::class, 'handleForm'])->name('handle-request');

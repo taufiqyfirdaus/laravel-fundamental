@@ -25,7 +25,6 @@ class ProductsController extends Controller
         } else if (!$request->filled('deskripsi')) {
             return redirect()->back()->with('error', 'Error. Field Deskripsi Wajib diisi.');
         }
-
         // Menyimpan data produk ke dalam session
         $newProduct = [
             'nama' => $request->nama,

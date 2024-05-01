@@ -41,7 +41,7 @@
                         placeholder="Masukkan stok produk">
                 </div>
                 <div class="form-group">
-                    <label for="kondisi">Kondisi</label>
+                    <label for="kondisi">Kondisi </label>
                     <select class="form-control" name="kondisi" id="kondisi">
                         <option value="0">Pilih Kondisi Barang</option>
                         <option value="Baru">Baru</option>
