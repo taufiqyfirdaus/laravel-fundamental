@@ -10,10 +10,10 @@
 
 <body>
     <section class="form-product py-5">
-        @if ($errors->any())
+        @if (Session::has('error'))
             <div class="error-message container bg-danger d-flex justify-content-center py-3 mb-2"
                 style="width: 35%; border-radius: 10px; margin-top:-40px;">
-                <b>Error: {{ $errors->first() }}</b>
+                <b>{{ Session::get('error') }}</b>
             </div>
         @endif
         <div class="container bg-info d-flex justify-content-center py-3" style="width: 35%; border-radius: 10px;">
@@ -43,7 +43,7 @@
                 <div class="form-group">
                     <label for="kondisi">Kondisi</label>
                     <select class="form-control" name="kondisi" id="kondisi">
-                        <option value="">Pilih Kondisi Barang</option>
+                        <option value="0">Pilih Kondisi Barang</option>
                         <option value="Baru">Baru</option>
                         <option value="Bekas">Bekas</option>
                     </select>

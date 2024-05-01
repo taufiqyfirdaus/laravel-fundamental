@@ -12,14 +12,19 @@ class ProductsController extends Controller
     }
     public function handleForm(Request $request)
     {
-        $request->validate([
-            'nama' => 'required',
-            'berat' => 'required',
-            'harga' => 'required',
-            'stok' => 'required',
-            'kondisi' => 'required',
-            'deskripsi' => 'required',
-        ]);
+        if (!$request->filled('nama')) {
+            return redirect()->back()->with('error', 'Error. Field Nama Produk Wajib diisi.');
+        } else if (!$request->filled('berat')) {
+            return redirect()->back()->with('error', 'Error. Field Berat Wajib diisi.');
+        } else if (!$request->filled('harga')) {
+            return redirect()->back()->with('error', 'Error. Field Harga Wajib diisi.');
+        } else if (!$request->filled('stok')) {
+            return redirect()->back()->with('error', 'Error. Field Stok Wajib diisi.');
+        } else if ($request->kondisi == 0) {
+            return redirect()->back()->with('error', 'Error. Field Kondisi Wajib diisi.');
+        } else if (!$request->filled('deskripsi')) {
+            return redirect()->back()->with('error', 'Error. Field Deskripsi Wajib diisi.');
+        }
 
         // Menyimpan data produk ke dalam session
         $newProduct = [
