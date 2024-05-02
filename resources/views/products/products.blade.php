@@ -15,16 +15,14 @@
                     Produk</b></a>
             <h2 style="text-align: center; margin-bottom:10px; font-weight:700;">PRODUCTS</h2>
             <div class="underline d-flex justify-content-center">
-                <div class="border-dark"
-                    style="margin-bottom: 20px; border-bottom: 3.5px solid; border-radius:10px; width: 6%"></div>
+                <div class="border-dark" style="margin-bottom: 20px; border-bottom: 3.5px solid; border-radius:10px; width: 6%"></div>
             </div>
 
             <div class="row">
                 @foreach ($list as $item)
                     <div class="col-md-3">
                         <div class="card" style="border-radius: 10px">
-                            <img src="{{ $item->gambar }}" class="card-img-top" alt="{{ $item->nama }}"
-                                style="height: 300px">
+                            <img src="{{ $item->gambar }}" class="card-img-top" alt="{{ $item->nama }}" style="height: 300px">
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col">
@@ -33,13 +31,11 @@
                                     </div>
                                     <div class="col">
                                         @if ($item->kondisi == 'Baru')
-                                            <p class="card-text bg-success py-1 px-2 text-center"
-                                                style="border-radius: 5px; width: fit-content; float: right; font-size:14px;">
+                                            <p class="card-text bg-success py-1 px-2 text-center" style="border-radius: 5px; width: fit-content; float: right; font-size:14px;">
                                                 <b>{{ $item->kondisi }}</b>
                                             </p>
                                         @elseif($item->kondisi == 'Bekas')
-                                            <p class="card-text bg-warning py-1 px-2 text-center"
-                                                style="border-radius: 5px; width: fit-content; float: right; font-size:14px;">
+                                            <p class="card-text bg-warning py-1 px-2 text-center" style="border-radius: 5px; width: fit-content; float: right; font-size:14px;">
                                                 <b>{{ $item->kondisi }}</b>
                                             </p>
                                         @endif
@@ -47,26 +43,22 @@
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        <p class="card-text bg-success py-1 px-2 text-center text-white"
-                                            style="border-radius: 5px; width: fit-content; font-size:14px;">
+                                        <p class="card-text bg-success py-1 px-2 text-center text-white" style="border-radius: 5px; width: fit-content; font-size:14px;">
                                             <b>{{ $item->stok }}</b>
                                         </p>
                                     </div>
                                     <div class="col">
-                                        <p class="card-text bg-info py-1 px-2 text-center"
-                                            style="border-radius: 5px; width: fit-content; font-size:14px;">
+                                        <p class="card-text bg-info py-1 px-2 text-center" style="border-radius: 5px; width: fit-content; font-size:14px;">
                                             <b>Rp.{{ number_format($item->harga, 0, ',', '.') }}</b>
                                         </p>
                                     </div>
                                     <div class="col">
-                                        <p class="card-text bg-secondary py-1 px-2 text-center text-white"
-                                            style="border-radius: 5px; width: fit-content; float: right; font-size:14px;">
+                                        <p class="card-text bg-secondary py-1 px-2 text-center text-white" style="border-radius: 5px; width: fit-content; float: right; font-size:14px;">
                                             <b>{{ $item->berat }} gr</b>
                                         </p>
                                     </div>
                                 </div>
-                                <p class="card-text mt-3"
-                                    style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">
+                                <p class="card-text mt-3" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">
                                     {{ $item->deskripsi }}
                                 </p>
                                 <a href="#" class="btn btn-primary" style="width: 100%">Pesan Sekarang</a>
